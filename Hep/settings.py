@@ -122,10 +122,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# settings.py
 STATIC_URL = '/static/'
-
-# ONLY if you have a global static folder, define STATICFILES_DIRS
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Uncomment only if you add global static/
+STATICFILES_DIRS = [
+    BASE_DIR / 'HepApp' / 'static',
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Used for collectstatic in production
 
