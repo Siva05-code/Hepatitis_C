@@ -23,9 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-5=%b=3ezf42^mmgprozfj%oq9y+u6*rp%tup*g^0kv4b+fp7k)"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = ['*']
+DEBUG = True
+ALLOWED_HOSTS = ['hepatitis-c.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -124,11 +123,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # settings.py
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'HepApp' / 'static',
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Used for collectstatic in production
+STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Used for collectstatic in production
 
 
 # Default primary key field type
